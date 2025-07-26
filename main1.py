@@ -6,26 +6,26 @@
 #     MAN = 'man' # <-- создаем "переменные" и присваиваем им значения
 #     WOMEN = 'women'
 #     ATHER = 'ather'
-# Сдела изменения смотри сюда
+#
 #
 # #
-# class User:
-#     def __init__(self, male: Male):
-#         self._male = male
-#
-#     @property
-#     def male(self) -> Male:
-#         return self._male
-#
-#     @male.setter
-#     def male(self, male: Male):
-#         if not isinstance(male, Male):
-#             raise Exception("Не число")
-#         self._male = male
-#
-#     def action1(self):
-#         pass
-#
+class User: # TODO CHECK THIS
+    def __init__(self, male: Male):
+        self._male = male
+
+    @property
+    def male(self) -> Male:
+        return self._male
+
+    @male.setter
+    def male(self, male: Male):
+        if not isinstance(male, Male):
+            raise Exception("Не число")
+        self._male = male
+
+    def action1(self):
+        pass
+
 #
 # class User1:
 #     def __init__(self, male: Male):
