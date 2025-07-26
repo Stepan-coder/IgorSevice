@@ -51,5 +51,5 @@ class CustomUser(User): # <-- Тут в скобочках пишем назва
         return f"CustomUser(name={self.name})"
 
     def action(self):
-        raise Exception(f"Ошибка в классе: {self.__repr__()}")
+        raise Exception(f"Ошибка в классе: {self.__repr__()}") # esdcsd
 
