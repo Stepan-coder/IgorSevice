@@ -1,5 +1,5 @@
-# import math
-# import enum # <-- Импортируем библиотеку. Библиотека - написанный сообществом Python. Точно такой же, какой пишем сами
+import math
+import enum # <-- Импортируем библиотеку. Библиотека - написанный сообществом Python. Точно такой же, какой пишем сами
 #
 #
 # class Male(enum.Enum): # <-- Тут пишем в скобочках enum.Enum, на следующем занятии разберем
@@ -7,25 +7,30 @@
 #     WOMEN = 'women'
 #     ATHER = 'ather'
 #
-#
 # #
-class User: # TODO CHECK THIS
-    def __init__(self, male: Male):
-        self._male = male
-
-    @property
-    def male(self) -> Male:
-        return self._male
-
-    @male.setter
-    def male(self, male: Male):
-        if not isinstance(male, Male):
-            raise Exception("Не число")
-        self._male = male
-
-    def action1(self):
-        pass
-
+#
+#
+# class User: # TODO CHECK THIS
+#     def __init__(self, male: Male):
+#         self.male = male
+#
+#     @property
+#     def male(self) -> Male:
+#         return self._male
+#
+#     @male.setter
+#     def male(self, male: Male):
+#         if not isinstance(male, Male):
+#             raise TypeError(f"Expected type <Male>,  but got {type(male)}")
+#         self._male = male
+#
+#     def action1(self):
+#         pass
+#
+#
+# user = User(male=Male.MAN)
+#
+# print(user.male)
 #
 # class User1:
 #     def __init__(self, male: Male):

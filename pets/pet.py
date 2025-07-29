@@ -1,11 +1,15 @@
-from typing import Optional
+from enums import PetType
 
 class Pet:
-    def __init__(self, name: str, age: int):
+    def __init__(self, name: str, age: int, pet_type: PetType):
         self.age = age
         self.name = name
+        self.pet_type = pet_type
 
     def __str__(self):
+        return f"Питомца зовут - {self._name}"
+
+    def __repr__(self): # TODO дописать по нормальному
         return f"Питомца зовут - {self._name}"
 
     @property
@@ -32,31 +36,5 @@ class Pet:
             raise TypeError('Не имя')
         self._name = name
 
-
-class Cat(Pet):
-    def __init__(self, name: str, age: int, work: str):
-        super().__init__(name=name, age=age)
-
-    def add_work(self):
-        work = 'Спать'
-        self.work = work
-
-
-class Horse(Pet):
-    def __init__(self, name: str, age: int, work: str):
-        super().__init__(name=name, age=age)
-
-    def add_work(self):
-        work = 'Пахать'
-        self.work = work
-
-
-class Dog(Pet): # TODO доделать класс
-    def __init__(self, name: str, age: int, work: str):
-        super().__init__(name=name, age=age)
-
-    def add_work(self):
-        work = 'Гулять'
-        self.work = work
-
-
+    # def to_dict(self): #TODO доработать, как сделано в User
+    #     pass
